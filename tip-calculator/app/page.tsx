@@ -132,7 +132,8 @@ export default function Home() {
           </div>
           <button
             className="bg-strong-cyan text-Very-dark-cyan
-          py-4 font-semibold text-lg rounded-lg uppercase"
+          py-4 font-semibold text-lg rounded-lg uppercase
+          hover:bg-strong-cyan/50"
             onClick={(e) => resetAll()}
           >
             Reset
