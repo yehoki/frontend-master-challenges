@@ -15,6 +15,14 @@ module.exports = {
       backgroundColor: {
         'grayish-blue': 'hsl(237, 18%, 59%)',
         'very-dark-blue': 'hsl(234, 17%, 12%)',
+        'very-dark-blue-ligher': 'hsl(235, 16%, 14%)',
+        'dark-desaturated-blue': 'hsl(236, 21%, 26%)',
+      },
+      textColor: {
+        'soft-red': 'hsl(345, 95%, 68%)',
+      },
+      fontFamily: {
+        redHatText: 'redHatText',
       },
     },
   },

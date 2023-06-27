@@ -9,6 +9,6 @@ export const convertSecondsToValues = (seconds: number): number[] => {
   const minutesLeftOver = Math.floor(
     60 * (24 * (seconds / secondsToDays - days) - hoursLeftOver)
   );
-  const secondsLeftOver = Math.floor(60 * (60 * (24 * (seconds / secondsToDays - days) - hoursLeftOver) - minutesLeftOver))
+  const secondsLeftOver = Math.round(60 * (60 * (24 * (seconds / secondsToDays - days) - hoursLeftOver) - minutesLeftOver))
   return [days, hoursLeftOver, minutesLeftOver, secondsLeftOver];
 };
