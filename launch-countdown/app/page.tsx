@@ -5,7 +5,7 @@ import { convertSecondsToValues } from '@/lib/helpers';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [timer, setTimer] = useState(60 * 60 * 24);
+  const [timer, setTimer] = useState(60 * 60 * 24 * 14);
   const [values, setValues] = useState<number[]>([]);
 
   useEffect(() => {
