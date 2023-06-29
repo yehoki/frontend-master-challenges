@@ -31,6 +31,7 @@ module.exports = {
       },
       placeholderColor: {
         'dark-gray': 'hsl(0, 0%, 52%)',
+        'very-light-gray': 'hsl(0, 0%, 98%)',
       },
     },
   },

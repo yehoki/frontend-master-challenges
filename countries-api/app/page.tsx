@@ -3,23 +3,24 @@
 import Display from '@/components/Display';
 import Filter from '@/components/Filter';
 import Navbar from '@/components/Navbar';
-import Image from 'next/image';
-import { useState } from 'react';
+import useDarkMode from '@/hooks/useDarkMode';
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const darkMode = useDarkMode();
+
   return (
     <main
       className={`
-      h-[100dvh]
+      min-h-[100dvh]
+      pt-20
       font-nunitoSans
-    ${isDarkMode ? 'bg-very-dark-blue' : 'bg-very-light-gray'}
-    ${isDarkMode ? 'text-white' : 'text-very-dark-blue-text'}
+      overflow-y-auto
+    ${darkMode.darkMode ? 'bg-very-dark-blue' : 'bg-very-light-gray'}
+    ${darkMode.darkMode ? 'text-white' : 'text-very-dark-blue-text'}
     `}
     >
-      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <Filter isDarkMode={isDarkMode} />
-      <Display isDarkMode={isDarkMode} />
+      <Filter isDarkMode={darkMode.darkMode} />
+      <Display isDarkMode={darkMode.darkMode} />
     </main>
   );
 }
